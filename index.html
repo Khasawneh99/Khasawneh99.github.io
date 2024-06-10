@@ -5,24 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Profile - Muhanad Al-Khasawneh</title>
     <style>
-        body { 
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            background-color: #f2f2f2;
             color: #333;
         }
-        header {
-            background-color: #343a40;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px 0;
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
         }
-        nav {
+        header {
             background-color: #0056b3;
             color: #ffffff;
+            padding: 20px;
             text-align: center;
-            padding: 10px 0;
+        }
+        nav {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
         }
         nav a {
             color: #ffffff;
@@ -30,32 +35,29 @@
             margin: 0 10px;
         }
         section {
-            padding: 50px 20px;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 5px;
         }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            overflow: hidden;
+        section h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #0056b3;
         }
-        .container h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        ul {
-            list-style-type: none;
+        section ul {
             padding: 0;
+            list-style-type: none;
         }
-        ul li {
-            margin-bottom: 20px;
+        section ul li {
+            margin-bottom: 10px;
         }
         footer {
             background-color: #343a40;
             color: #ffffff;
             text-align: center;
             padding: 20px 0;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
         }
     </style>
 </head>
@@ -77,55 +79,81 @@
         <a href="#projects">Projects</a>
     </nav>
 
-    <section id="profile" class="container">
-        <h2>Profile</h2>
-        <p>Insert your profile content here.</p>
-    </section>
+    <div class="container">
+        <section id="profile">
+            <h2>Profile</h2>
+            <p>Insert your profile content here.</p>
+        </section>
 
-    <section id="education" class="container">
-        <h2>Education</h2>
-        <ul>
-            <li><strong>Bachelor of Science in Computer Science</strong>, University Name (Graduation Year)</li>
-            <li><strong>Master of Science in Software Engineering</strong>, University Name (Graduation Year)</li>
-        </ul>
-    </section>
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>Bachelor of Science in Computer Science</strong>, University Name (Graduation Year)</li>
+                <li><strong>Master of Science in Software Engineering</strong>, University Name (Graduation Year)</li>
+            </ul>
+        </section>
 
-    <section id="experience" class="container">
-        <h2>Experience</h2>
-        <ul>
-            <li><strong>Software Developer</strong>, Company Name (Start Year - End Year)
-                <ul>
-                    <li>Developed and maintained web applications using JavaScript, HTML, and CSS</li>
-                    <li>Collaborated with cross-functional teams to deliver high-quality software products</li>
-                </ul>
-            </li>
-            <li><strong>Intern</strong>, Another Company (Start Year - End Year)
-                <ul>
-                    <li>Assisted in the development of a mobile application using React Native</li>
-                    <li>Conducted code reviews and provided feedback to junior developers</li>
-                </ul>
-            </li>
-        </ul>
-    </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <ul>
+                <li><strong>Software Developer</strong>, Company Name (Start Year - End Year)
+                    <ul>
+                        <li>Developed and maintained web applications using JavaScript, HTML, and CSS</li>
+                        <li>Collaborated with cross-functional teams to deliver high-quality software products</li>
+                    </ul>
+                </li>
+                <li><strong>Intern</strong>, Another Company (Start Year - End Year)
+                    <ul>
+                        <li>Assisted in the development of a mobile application using React Native</li>
+                        <li>Conducted code reviews and provided feedback to junior developers</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
 
-    <section id="skills" class="container">
-        <h2>Skills</h2>
-        <ul>
-            <li>Programming Languages: JavaScript, Python, Java</li>
-            <li>Web Development: HTML, CSS, Bootstrap, React</li>
-            <li>Database Management: MySQL, MongoDB</li>
-            <li>Tools: Git, Docker, Jenkins</li>
-        </ul>
-    </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming Languages: JavaScript, Python, Java</li>
+                <li>Web Development: HTML, CSS, Bootstrap, React</li>
+                <li>Database Management: MySQL, MongoDB</li>
+                <li>Tools: Git, Docker, Jenkins</li>
+            </ul>
+        </section>
 
-    <section id="projects-certificates" class="container">
-        <h2>Projects and Certificates</h2>
-        <h3>Projects</h3>
-        <ul>
-            <li><strong>Personal Portfolio Website</strong>
-                <ul>
-                    <li>Developed a personal portfolio website using HTML, CSS, and JavaScript</li>
-                    <li>Implemented responsive design to ensure compatibility across devices</li>
-                </ul>
-            </li>
-            <
+        <section id="projects-certificates">
+            <h2>Projects and Certificates</h2>
+            <h3>Projects</h3>
+            <ul>
+                <li><strong>Personal Portfolio Website</strong>
+                    <ul>
+                        <li>Developed a personal portfolio website using HTML, CSS, and JavaScript</li>
+                        <li>Implemented responsive design to ensure compatibility across devices</li>
+                    </ul>
+                </li>
+                <li><strong>Weather Forecast Application</strong>
+                    <ul>
+                        <li>Created a weather forecast application using React and OpenWeatherMap API</li>
+                        <li>Integrated real-time weather data and dynamic user interface</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Certificates</h3>
+            <ul>
+                <li><strong>Certified JavaScript Developer</strong>, Issuing Organization (Year)</li>
+                <li><strong>Professional Scrum Master</strong>, Issuing Organization (Year)</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Additional Projects and Information</h2>
+            <p><a href="waph.html" target="_blank">Web Application Programming and Hacking Course Projects</a></p>
+            <!-- Insert any additional content or projects here -->
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Muhanad Al-Khasawneh</p>
+    </footer>
+</body>
+</html>
