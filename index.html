@@ -87,6 +87,21 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
+        #weather {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        #weather img {
+            width: 50px;
+            height: 50px;
+        }
     </style>
 </head>
 <body>
@@ -213,17 +228,4 @@
                             throw new Error('Network response was not ok ' + response.statusText);
                         }
                         const data = await response.json();
-                        console.log(data);  // Debugging line
-                        const weather = data.data[0];
-                        document.getElementById('weather').innerHTML = `Current weather in ${weather.city_name}: ${weather.temp}°C, ${weather.weather.description}`;
-                    } catch (error) {
-                        console.error('Error fetching weather data:', error);  // Error handling
-                        document.getElementById('weather').innerHTML = 'Error fetching weather data';
-                    }
-                }
-
-                document.addEventListener("DOMContentLoaded", function() {
-                    fetchWeather();
-                });
-            </script>
-            <div id="weather" style="margin-top: 20px; padding: 10px; background-color: #ffffff; border-radius: 10px; box-shadow: 0 2px 4px
+                        console.log(data
