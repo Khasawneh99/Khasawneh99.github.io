@@ -190,6 +190,7 @@
                 <canvas id="analog-clock" width="150" height="150" style="background-color:#999"></canvas>
                 <iframe src="https://s01.flagcounter.com/count2/Bsxo/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_12/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" frameborder="0" scrolling="no" style="width: 200px; height: 150px;"></iframe>
             </div>
+            <div id="weather"></div>
             <script src="https://waph-uc.github.io/clock.js"></script>
             <script>
                 function displayTime() {
@@ -224,8 +225,6 @@
                 async function fetchWeather() {
                     try {
                         const response = await fetch('https://api.weatherbit.io/v2.0/current?city=Cincinnati,OH&key=2882c9ce0095430fbfd70980bc1b58f2');
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok ' + response.statusText);
-                        }
                         const data = await response.json();
-                        console.log(data
+                        const weather = data.data[0];
+                        const weatherIconUrl = `https://www.weatherbit.io/static/img/icons/${weather.weather.icon
