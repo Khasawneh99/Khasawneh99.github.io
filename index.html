@@ -205,22 +205,17 @@
                         document.cookie = "visited=" + new Date();
                     }
                 });
+
+                async function fetchWeather() {
+                    const response = await fetch('https://api.weatherbit.io/v2.0/current?city=Cincinnati,OH&key=2882c9ce0095430fbfd70980bc1b58f2');
+                    const data = await response.json();
+                    const weather = data.data[0];
+                    document.getElementById('weather').innerHTML = `Current weather in ${weather.city_name}: ${weather.temp}°C, ${weather.weather.description}`;
+                }
+
+                document.addEventListener("DOMContentLoaded", function() {
+                    fetchWeather();
+                });
             </script>
-            <div id="response"></div>
-            <input name="data" id="data">
-            <button class="btn btn-primary" onclick="guessAge($('#data').val())">Guess Age</button>
-
-            <div id="flagcounter">
-                <a href="https://info.flagcounter.com/aIa1" target="_blank">
-                    <img src="https://s11.flagcounter.com/count2/yn5s/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0">
-                </a>
-            </div>
-
+            <div id="weather" style="margin-top: 20px; padding: 10px; background-color: #ffffff; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);"></div>
         </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Muhanad Al-Khasawneh</p>
-    </footer>
-</body>
-</html>
